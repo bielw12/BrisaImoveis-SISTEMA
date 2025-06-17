@@ -1,0 +1,385 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 8px 40px;
+  color: rgb(255, 255, 255);
+}
+
+/* Alinhar logo + navbar lado a lado */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 40px;
+  object-fit: contain;
+  margin-right: 12px; /* menos espaçado */
+}
+
+/* Estilo da navbar */
+.navbar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-right: 9px;
+  font-weight: 500;
+  
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Caixinha de login no canto direito */
+.login-box {
+  display: flex;
+  align-items: center;
+  background-color: rgb(213, 213, 213);
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.login-box .login-icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.login-box a {
+  color: #000000;
+  text-decoration: none;
+}
+.login-box:hover {
+  background-color: rgb(174, 174, 174);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: rgb(20, 11, 11);
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(154, 45, 45);
+  color: #004aad;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  top: 30px;
+}
+
+.dropdown-content a {
+  color: #254a7a;
+  padding: 10px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff00;
+}
+
+/* Mostrar dropdown ao clicar */
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Dropdown */
+/* Ajusta espaçamento da logo e navbar */
+.logo img {
+  height: 50px;
+  object-fit: contain;
+  margin-right: 16px; /* diminuído de 30px para 16px */
+}
+
+/* Navbar com menos espaçamento entre os itens */
+.navbar a,
+.dropbtn {
+  margin-right: 14px;
+  font-size: 14px;
+}
+
+/* Dropdown minimalista */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  position: absolute;
+  background-color: rgba(183, 181, 181, 0.95); /* cinza claro e semi-transparente */
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(222, 33, 33, 0.05); /* sombra mais sutil */
+  z-index: 10;
+  border-radius: 6px;
+  overflow: hidden;
+  top: 28px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 8px 12px;
+  font-size: 13px;
+  display: block;
+  text-decoration: none;
+}
+
+
+
+/* Dropdown visível */
+.dropdown.active .dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
+
+.compra-pagina .compra h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 0px;
+  color: #738bab;
+}
+
+/*CARDS*/
+.cards-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;       /* Centraliza horizontalmente */
+    max-width: 1200px;             /* Limita largura máxima */
+    width: 100%;
+    margin: 0 auto 80px auto;      /* Centraliza o container e dá o espaço abaixo (para o carrossel) */
+    padding: 20px;                 /* Um pequeno respiro lateral opcional */
+}
+
+
+.card {
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 550px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.img-container {
+    position: relative;
+}
+
+.card img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-price {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.9em;
+    padding: 4px 8px;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 5px;
+}
+
+.info {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.info .price {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0077cc;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
+.details div {
+    min-width: 110px;
+}
+
+ 
+
+/* Footer */
+.footer {
+  background-color: #ADD8E6;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+}
+
+.footer div {
+  max-width: 250px;
+  margin: 10px 0;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    margin-top: 10px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Animação geral */
+.navbar a,
+.dropbtn {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover em Início */
+.navbar a:hover {
+  transform: scale(1.05);
+  color: #727272;
+}
+
+/* Hover em Comprar/Alugar */
+.dropbtn:hover {
+  transform: scale(1.05);
+  color: #727272;
+}
+
+/* Animação apenas na setinha ▾ */
+.dropbtn::after {
+  content: ' ▾';
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* Gira a setinha levemente ao passar o mouse */
+.dropbtn:hover::after {
+  transform: rotate(180deg);
+}
+
+/* Seção da página */
+.pagina-imoveis {
+    background-color: #c8e9f9;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+/* Banner */
+.banner-local {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.banner-local img {
+    width: 100%;
+    height: 300px; /* Imagem bem fina */
+    object-fit: cover;
+    display: block;
+}
+
+/* Texto sobreposto */
+.texto-banner {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.texto-banner h3 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.texto-banner p {
+    margin: 2px 0 0;
+    font-size: 16px;
+}
+

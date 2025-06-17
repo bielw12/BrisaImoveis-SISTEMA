@@ -1,0 +1,887 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 8px 40px;
+  color: rgb(255, 255, 255);
+}
+
+/* Alinhar logo + navbar lado a lado */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  object-fit: contain;
+  margin-right: 12px; /* menos espaçado */
+}
+
+/* Estilo da navbar */
+.navbar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-right: 9px;
+  font-weight: 500;
+  
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Caixinha de login no canto direito */
+.login-box {
+  display: flex;
+  align-items: center;
+  background-color: rgb(213, 213, 213);
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.login-box .login-icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.login-box a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.login-box:hover {
+  background-color: rgb(174, 174, 174);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: rgb(20, 11, 11);
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(154, 45, 45);
+  color: #004aad;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  top: 30px;
+}
+
+.dropdown-content a {
+  color: #254a7a;
+  padding: 10px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff00;
+}
+
+/* Mostrar dropdown ao clicar */
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Dropdown */
+/* Ajusta espaçamento da logo e navbar */
+.logo img {
+  height: 50px;
+  object-fit: contain;
+  margin-right: 16px; /* diminuído de 30px para 16px */
+}
+
+/* Navbar com menos espaçamento entre os itens */
+.navbar a,
+.dropbtn {
+  margin-right: 14px;
+  font-size: 14px;
+}
+
+/* Dropdown minimalista */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  position: absolute;
+  background-color: rgba(183, 181, 181, 0.95); /* cinza claro e semi-transparente */
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(222, 33, 33, 0.05); /* sombra mais sutil */
+  z-index: 10;
+  border-radius: 6px;
+  overflow: hidden;
+  top: 28px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 8px 12px;
+  font-size: 13px;
+  display: block;
+  text-decoration: none;
+}
+
+
+
+/* Dropdown visível */
+.dropdown.active .dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
+
+  /* Search Section */
+        .search-section {
+            position: relative;
+            width: 100%;
+            height: 400px; /* Altura da seção */
+            background: url('images/2ed912d8-b960-4231-ae92-b3ca598b286d.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .search-bar {
+            display: flex;
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 50px;
+            overflow: hidden;
+            padding: 5px;
+            align-items: center;
+        }
+
+        .search-bar input {
+            flex-grow: 1;
+            border: none;
+            padding: 12px 20px;
+            outline: none;
+            font-size: 1em;
+            background: transparent;
+        }
+
+        .search-bar .search-icon,
+        .search-bar .mic-icon {
+            padding: 10px;
+            color: var(--gray-text);
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .search-bar .search-icon {
+            padding-left: 20px;
+        }
+
+/* Destaques */
+.destaques {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.destaques h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.destaque-img {
+  display: inline-block;
+  text-align: center;
+}
+
+.destaque-img img {
+  width: 300px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.destaques-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.destaque-img {
+  width: 300px;
+  text-align: center;
+}
+
+.destaque-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destaque-img p {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+}
+
+.imagem-hero {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.imagem-hero img {
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}h
+
+/* Listagem de Aluguel */
+.listagem {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.listagem h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Venda em Destaque */
+.venda-destaque {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.venda-destaque h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.descricao {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.preco {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #007f00;
+  font-weight: bold;
+}
+
+/* Login */
+.login-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.login-section h2 {
+  margin-bottom: 20px;
+}
+
+#login-form {
+  display: inline-block;
+  text-align: left;
+}
+
+#login-form input {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+#login-form button {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  background-color: #004aad;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#login-form button:hover {
+  background-color: #003080;
+}
+
+/* Footer */
+.footer {
+    background-color: #a4d3e7;
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+.footer h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.footer p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.contato, .operacao {
+    max-width: 250px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.avaliacao {
+    text-align: center;
+}
+
+.estrelas {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.star {
+    color: white;
+    transition: color 0.3s;
+}
+
+.star.selecionada {
+    color: gold;
+}
+
+#mensagem {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    margin-top: 10px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Animação geral */
+.navbar a,
+.dropbtn {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover em Início */
+.navbar a:hover {
+  transform: scale(1.05);
+  color: #727272;
+}
+
+/* Hover em Comprar/Alugar */
+.dropbtn:hover {
+  transform: scale(1.05);
+  color: #727272;
+}
+
+/* Animação apenas na setinha ▾ */
+.dropbtn::after {
+  content: ' ▾';
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* Gira a setinha levemente ao passar o mouse */
+.dropbtn:hover::after {
+  transform: rotate(180deg);
+}
+
+
+  .compra-pagina .compra {
+  padding: 40px 5%;
+  background-color: #f8f8f8;
+}
+
+.compra-pagina .compra h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #004aad;
+}
+
+.compra-pagina .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.compra-pagina .card-imovel {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 320px;
+  transition: transform 0.2s;
+}
+
+.compra-pagina .card-imovel:hover {
+  transform: scale(1.02);
+}
+
+.compra-pagina .card-imovel img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.compra-pagina .card-info {
+  padding: 16px;
+}
+
+.compra-pagina .card-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.compra-pagina .card-info p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.compra-pagina .card-info .preco {
+  font-weight: bold;
+  color: #004aad;
+  margin-top: 10px;
+}
+
+.compra-pagina .botao-comprar {
+  margin-top: 10px;
+  background-color: #004aad;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.compra-pagina .botao-comprar:hover {
+  background-color: #003a8c;
+}
+
+.compra-pagina .footer {
+  background-color: #004aad;
+  color: #fff;
+  padding: 30px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.compra-pagina .footer p {
+  margin: 5px 0;
+}
+
+.compra-pagina .footer strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Outras mudanças que você desejar para as páginas de compra */
+.compra-pagina .hero {
+  display: none; /* Remover seção hero da página de compra */
+}
+
+.compra-pagina .destaques {
+  display: none; /* Remover destaques da página de compra */
+} 
+
+/* História da Imobiliária */
+.historia {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.historia h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.historia-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+.historia-container p {
+  margin-bottom: 20px;
+}
+
+/* Variáveis para cores, caso ainda não as tenha no seu CSS */
+:root {
+    --primary-blue: #007dab; /* Azul vibrante */
+    --light-blue: #ADD8E6; /* Azul claro para fundos */
+    --dark-text: #333;
+    /* Adicione outras variáveis se forem usadas por esta seção e não estiverem definidas */
+}
+
+/* Seção Casa dos Sonhos */
+.dream-house-section {
+    background-color: var(--light-blue);
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dream-house-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* Alinhar com o design geral da página */
+    background-color: var(--light-blue); /* Fundo da própria seção, como na imagem */
+    border-radius: 10px; /* Cantos arredondados, se desejar */
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+    flex-direction: column; /* Coluna em telas menores */
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .dream-house-container {
+        flex-direction: row; /* Linha em telas maiores */
+        align-items: flex-start;
+    }
+}
+
+.dream-house-text-section {
+    flex: 1; /* Ocupa o espaço disponível */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.dream-house-text-section h1 {
+    font-family: 'Playfair Display', serif; /* Use a fonte da imagem */
+    font-size: 3.5em;
+    color: var(--dark-text);
+    line-height: 1.1;
+    margin-bottom: 0;
+    font-weight: normal; /* Para o estilo da fonte */
+}
+
+.dream-house-text-section .highlight {
+    color: var(--primary-blue); /* Um tom de azul para o destaque */
+    font-weight: bold;
+    font-style: italic; /* Para o estilo "sonhos" */
+}
+
+.dream-house-image-gallery {
+    flex: 2; /* Ocupa mais espaço que a seção de texto */
+    display: flex; /* Mudado para flexbox para melhor controle da única imagem */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+    padding: 20px;
+    background-color: var(--light-blue); /* Fundo azul claro */
+    min-height: 350px; /* Garante uma altura mínima para a galeria mesmo com uma imagem */
+}
+
+.dream-house-image-gallery .single-large-image {
+    width: 100%; /* Ocupa toda a largura disponível na galeria */
+    max-width: 600px; /* Limita a largura máxima da imagem se a galeria for muito grande */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer, se tiver um height fixo */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    aspect-ratio: 4/3; /* Define uma proporção para a imagem, se desejar (ex: 4:3 ou 16:9) */
+}
+
+
+/* Responsive Adjustments para a seção dream house */
+@media (max-width: 768px) {
+    .dream-house-text-section h1 {
+        font-size: 2.5em;
+    }
+    .dream-house-image-gallery {
+        min-height: 250px; /* Ajuste a altura mínima para telas menores */
+    }
+    .dream-house-image-gallery .single-large-image {
+        max-width: 90%; /* A imagem pode ser um pouco menor em telas menores */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .dream-house-text-section h1 {
+        font-size: 2em;
+    }
+    .dream-house-image-gallery {
+        min-height: 200px; /* Mais ajuste para telas muito pequenas */
+    }
+    .dream-house-image-gallery .single-large-image {
+        max-width: 100%; /* Permite que a imagem ocupe 100% da largura do contêiner */
+    }
+}
+
+/* Location Card */
+        .location-card-section {
+            display: flex;
+            justify-content: center;
+            padding: 0 20px 55px;
+        }
+
+        .location-card {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+            background-color: white(--white);
+            position: relative; /* Para posicionar o texto sobre a imagem */
+        }
+
+        .location-card img {
+            width: 100%;
+            height: 450px; /* Altura da imagem */
+            object-fit: cover;
+            display: block;
+        }
+
+        .location-card .text-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgb(94, 94, 94), rgba(255, 255, 255, 0));
+            padding: 20px;
+            color: rgb(255, 255, 255);
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+    /*carrossel*/
+
+/* Estilo base que você forneceu */
+body {
+    background-color: #f0f0f0; /* Cor de fundo para melhor visualização */
+    font-family: sans-serif;
+}
+
+.location-card-section {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 55px;
+}
+
+.location-card {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden; /* Essencial para o carrossel */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* --- NOVOS ESTILOS PARA O CARROSSEL --- */
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animação de transição */
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-item .text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    padding: 20px;
+    color: white;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+/* Estilo para os botões de navegação */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 24px;
+    border-radius: 5px;
+    z-index: 10;
+    user-select: none; /* Impede a seleção do texto do botão */
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo para as bolinhas de navegação */
+.carousel-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: white;
+}

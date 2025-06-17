@@ -1,0 +1,153 @@
+/* ────────────────────  ALUGAR – CORUMBAU  ──────────────────── */
+
+/* Paleta local (você pode ajustar) */
+:root {
+  --cba-azul-bg: #00aaff;      /* fundo principal */
+  --cba-azul-btn: #004aad;     /* botões / destaques */
+  --cba-hero-overlay: rgba(0, 0, 0, 0.45);
+}
+
+/* Fundo geral */
+body.alugar-pagina {
+  background: var(--cba-azul-bg);
+}
+
+/* -------- HERO -------- */
+.alugar-pagina .hero {
+  position: relative;
+  height: 360px;
+  background: url("./images/hero-corumbau.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 25px;
+}
+
+.alugar-pagina .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--cba-hero-overlay);
+}
+
+.alugar-pagina .hero h1,
+.alugar-pagina .search-bar {
+  position: relative;        /* fica acima do overlay */
+  z-index: 1;
+}
+
+.alugar-pagina .hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+}
+
+/* barra de busca no hero */
+.alugar-pagina .search-bar {
+  display: flex;
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.alugar-pagina .search-bar input {
+  flex-grow: 1;
+  border: none;
+  padding: 12px 18px;
+  font-size: 1rem;
+  outline: none;
+  background: transparent;
+}
+
+/* -------- LISTAGEM -------- */
+.alugar-pagina .alugar {
+  padding: 50px 5%;
+}
+
+.alugar-pagina .alugar h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--cba-azul-btn);
+  margin-bottom: 30px;
+}
+
+/* grade de cards */
+.alugar-pagina .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+/* card individual */
+.alugar-pagina .card-imovel {
+  background: #fff;
+  border-radius: 10px;
+  max-width: 320px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.alugar-pagina .card-imovel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+/* imagem do card */
+.alugar-pagina .card-imovel img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* textos */
+.alugar-pagina .card-info {
+  padding: 18px;
+}
+.alugar-pagina .card-info h3 {
+  font-size: 1.25rem;
+  color: #222;
+  margin-bottom: 8px;
+}
+.alugar-pagina .card-info p {
+  color: #555;
+  margin-bottom: 6px;
+}
+.alugar-pagina .card-info .preco {
+  font-weight: 700;
+  color: var(--cba-azul-btn);
+  margin-top: 10px;
+}
+
+/* botão */
+.alugar-pagina .botao-comprar {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 0;
+  background: var(--cba-azul-btn);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.alugar-pagina .botao-comprar:hover {
+  background: #003a8c;
+}
+
+/* -------- RESPONSIVO -------- */
+@media (max-width: 768px) {
+  .alugar-pagina .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .alugar-pagina .hero h1 {
+    font-size: 1.8rem;
+  }
+}

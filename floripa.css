@@ -1,0 +1,552 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: rgb(255, 255, 255);
+}
+
+.header {
+  padding: 2px 40px; /* menor que o original */
+}
+
+/* Alinhar logo + navbar lado a lado */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  object-fit: contain;
+  margin-right: 12px; /* menos espaçado */
+}
+
+/* Estilo da navbar */
+.navbar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-right: 9px;
+  font-weight: 500;
+  
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Caixinha de login no canto direito */
+.login-box {
+  background-color: #d9d9d9; /* cinza claro */
+  padding: 8px 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.login-box a {
+  text-decoration: none;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-box a i {
+  font-size: 18px;
+  color: #000; /* ícone preto */
+}
+
+/* 🔥 Hover efeito */
+.login-box:hover {
+  background-color: #e0e0e0; /* Fica um pouco mais escuro ao passar o mouse */
+}
+
+.login-box a:hover {
+  color: #000; /* Texto fica bem preto no hover */
+}
+
+.login-box a:hover i {
+  color: #000; /* Ícone continua preto no hover */
+}
+
+
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: rgb(20, 11, 11);
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(154, 45, 45);
+  color: #004aad;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  top: 30px;
+}
+
+.dropdown-content a {
+  color: #254a7a;
+  padding: 10px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff00;
+}
+
+/* Mostrar dropdown ao clicar */
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Dropdown */
+/* Ajusta espaçamento da logo e navbar */
+.logo img {
+  height: 50px;
+  object-fit: contain;
+  margin-right: 16px; /* diminuído de 30px para 16px */
+}
+
+/* Navbar com menos espaçamento entre os itens */
+.navbar a,
+.dropbtn {
+  margin-right: 14px;
+  font-size: 14px;
+}
+
+/* Dropdown minimalista */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  position: absolute;
+  background-color: rgba(183, 181, 181, 0.95); /* cinza claro e semi-transparente */
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(222, 33, 33, 0.05); /* sombra mais sutil */
+  z-index: 10;
+  border-radius: 6px;
+  overflow: hidden;
+  top: 28px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 8px 12px;
+  font-size: 13px;
+  display: block;
+  text-decoration: none;
+}
+
+
+
+/* Dropdown visível */
+.dropdown.active .dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
+
+
+
+.compra-pagina .compra h1 {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #6188c7;
+  margin: 60px auto; /* <-- centraliza horizontalmente */
+  padding-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  width: fit-content;
+}
+
+.compra-pagina .compra h1::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #738bab, #2f4b77);
+  bottom: 0;
+  left: 20%;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.compra-pagina .compra h1:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+
+/*CARDS*/
+
+.card {
+  transition: transform 0.3s ease;
+  /* Outros estilos do seu card, como: */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cards-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;       /* Centraliza horizontalmente */
+    max-width: 1200px;             /* Limita largura máxima */
+    width: 100%;
+    margin: 0 auto 80px auto;      /* Centraliza o container e dá o espaço abaixo (para o carrossel) */
+    padding: 20px;     
+                /* Um pequeno respiro lateral opcional */
+}
+
+.cards-container {
+  gap: 50px 30px;
+
+}
+
+
+.card {
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 550px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.img-container {
+    position: relative;
+}
+
+.card img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-price {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.9em;
+    padding: 4px 8px;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 5px;
+}
+
+.info {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.info .price {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0077cc;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
+.details div {
+    min-width: 110px;
+}
+
+ 
+
+.ver-mais-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 15px 0; /* cima 30px, baixo 15px */
+}
+
+
+
+.btn-ver-mais {
+  padding: 16px 24px;
+  font-size: 1rem;
+  border: 1px solid #738bab;
+  background-color: transparent;
+  color: #738bab;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-ver-mais:hover {
+  background-color: #738bab;
+  color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #a4d3e7;
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+.footer h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.footer p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.contato, .operacao {
+    max-width: 250px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.avaliacao {
+    text-align: center;
+}
+
+.estrelas {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.star {
+    color: white;
+    transition: color 0.3s;
+}
+
+.star.selecionada {
+    color: gold;
+}
+
+#mensagem {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* Animação geral */
+.navbar a,
+.dropbtn {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover em Início */
+.navbar a:hover {
+  transform: scale(1.05);
+  color: #727272;
+}
+
+/* Hover em Comprar/Alugar */
+.dropbtn:hover {
+  transform: scale(1.05);
+  color: #727272;
+}
+
+/* Animação apenas na setinha ▾ */
+.dropbtn::after {
+  content: ' ▾';
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* Gira a setinha levemente ao passar o mouse */
+.dropbtn:hover::after {
+  transform: rotate(180deg);
+}
+
+/* Seção da página */
+.pagina-imoveis {
+    background-color: #c8e9f9;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+/* Banner */
+.banner-local {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.banner-local img {
+    width: 100%;
+    height: 300px; /* Imagem bem fina */
+    object-fit: cover;
+    display: block;
+}
+
+/* Texto sobreposto */
+.texto-banner {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.texto-banner h3 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.texto-banner p {
+    margin: 2px 0 0;
+    font-size: 16px;
+}
+
+
+/* Location Card */
+        .location-card-section {
+            display: flex;
+            justify-content: center;
+            padding: 0 2px 55px;
+        }
+
+        .location-card {
+            width: 100%;
+            max-width: 999px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+           background-color: white; /* ou */ background-color: var(--white);
+            position: relative; /* Para posicionar o texto sobre a imagem */
+        }
+
+        .location-card img {
+            width: 100%;
+            height: 300px; /* Altura da imagem */
+            object-fit: cover;
+            display: block;
+        }
+
+        .location-card .text-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgb(94, 94, 94), rgba(255, 255, 255, 0));
+            padding: 20px;
+            color: rgb(255, 255, 255);
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+.btn-detalhes {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: #444;
+  background: transparent;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.25s, color 0.25s;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-detalhes:hover {
+  background-color: #f0f0f0;
+  color: #222;
+  border-color: #888;
+}
+
+
