@@ -1,1 +1,5 @@
 # BRISAFRONT
+On the front-end, I focused on creating an elegant and immersive experience. Using Figma, I designed an intuitive layout that highlights the stunning properties. The code, built with HTML, CSS, JavaScript, and Bootstrap, is fully responsive, guaranteeing a flawless viewing experience on any device, from desktops to mobile phones.
+The back-end was the core of this project. 
+
+I developed a robust system using PHP and SQL, with the environment configured via XAMPP to run the Apache server and MySQL database. This setup allowed for the efficient management of property listings. A key feature is the dynamic search function, which filters properties by location, type, and price, providing a highly personalized experience for potential buyers. To ensure the integrity of user data, I implemented Bcrypt hashing, a secure method for encrypting passwords and protecting sensitive information.
